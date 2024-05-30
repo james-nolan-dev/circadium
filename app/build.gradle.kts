@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.realm)
     alias(libs.plugins.ksp)
 }
 
@@ -62,11 +61,49 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
 
+    // Firebase
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.storage)
+
+    // Room components
+    implementation(libs.androidx.room.runtime)
+    ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+
+    // Splash
+    implementation(libs.splash)
+
+    // Mongo DB Realm
+    implementation(libs.realm.coroutines)
+    implementation(libs.realm)
+
     // Dagger - Hilt
     implementation(libs.dagger)
     ksp(libs.dagger.compiler)
     ksp(libs.hilt.compiler)
     implementation(libs.hilt.navigation)
+
+    // Coil
+    implementation(libs.coil)
+
+    // Date-Time Picker
+    implementation(libs.date.time.picker)
+
+    // CALENDAR
+    implementation(libs.calendar)
+
+    // CLOCK
+    implementation(libs.clock)
+
+    // Message Bar Compose
+    implementation(libs.message.bar)
+
+    // One-Tap Compose
+    implementation(libs.one.tap)
+
+    // Desugar JDK
+    coreLibraryDesugaring(libs.desugar)
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

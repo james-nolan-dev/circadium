@@ -1,19 +1,30 @@
 [versions]
-agp = "8.4.0"
+agp = "8.4.1"
 kotlin = "1.9.0"
-coreKtx = "1.10.1"
+coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
-lifecycleRuntimeKtx = "2.6.1"
-activityCompose = "1.8.0"
+lifecycleRuntimeKtx = "2.8.1"
+activityCompose = "1.9.0"
 composeBom = "2023.08.00"
 realm = "1.16.0"
-dagger = "2.48"
+dagger = "2.51.1"
 hiltCompiler = "1.2.0"
 google-services = "4.4.1"
 hilt-navigation = "1.2.0"
-ksp = "2.0.0-1.0.21"
+ksp = "1.9.10-1.0.13"
+firebase-auth = "23.0.0"
+firebase-storage = "21.0.0"
+room = "2.5.2"
+splash = "1.0.1"
+realm-coroutines = "1.8.1"
+coil = "2.6.0"
+maxkeppeler-dialogs = "1.3.0"
+message-bar = "1.0.8"
+one-tap = "1.0.12"
+desugar = "2.0.4"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -30,15 +41,30 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+
 dagger = { group = "com.google.dagger", name = "hilt-android", version.ref = "dagger" }
 dagger-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "dagger" }
 hilt-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltCompiler" }
 hilt-navigation = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltCompiler" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth-ktx", version.ref = "firebase-auth" }
+firebase-storage = { group = "com.google.firebase", name = "firebase-storage-ktx", version.ref = "firebase-storage" }
+splash = { group = "androidx.core", name = "core-splashscreen", version.ref = "splash" }
+realm-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "realm-coroutines" }
+realm = { group = "io.realm.kotlin", name = "library-sync", version.ref = "realm" }
+coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
+date-time-picker = { group = "com.maxkeppeler.sheets-compose-dialogs", name = "core", version.ref = "maxkeppeler-dialogs" }
+calendar = { group = "com.maxkeppeler.sheets-compose-dialogs", name = "calendar", version.ref = "maxkeppeler-dialogs" }
+clock = { group = "com.maxkeppeler.sheets-compose-dialogs", name = "clock", version.ref = "maxkeppeler-dialogs" }
+message-bar = { group = "com.github.stevdza-san", name = "MessageBarCompose", version.ref = "message-bar" }
+one-tap = { group = "com.github.stevdza-san", name = "OneTapCompose", version.ref = "one-tap" }
+desugar = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "desugar" }
+
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-realm = { id = "io.realm.kotlin", version.ref = "realm" }
-google-services = { id = "com.google.gms.google.services", version.ref = "google-services" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
