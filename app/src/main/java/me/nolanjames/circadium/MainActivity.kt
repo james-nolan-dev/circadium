@@ -4,10 +4,10 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Scaffold
-import androidx.compose.ui.Modifier
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.navigation.compose.rememberNavController
+import me.nolanjames.circadium.navigation.Screen
+import me.nolanjames.circadium.navigation.SetupNavGraph
 import me.nolanjames.circadium.ui.theme.CircadiumTheme
 
 class MainActivity : ComponentActivity() {
@@ -17,9 +17,12 @@ class MainActivity : ComponentActivity() {
         installSplashScreen()
         setContent {
             CircadiumTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                val navController = rememberNavController()
+                SetupNavGraph(
+                    startDestination = Screen.Authentication.route,
+                    navController = navController
+                )
 
-                }
             }
         }
     }
