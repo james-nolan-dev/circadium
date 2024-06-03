@@ -7,6 +7,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import me.nolanjames.circadium.presentation.screens.auth.AuthenticationScreen
 import me.nolanjames.circadium.util.Constants.WRITE_SCREEN_ARGUMENT_KEY
 
 @Composable
@@ -20,7 +21,7 @@ fun SetupNavGraph(startDestination: String, navController: NavHostController) {
 
 fun NavGraphBuilder.authenticationRoute() {
     composable(route = Screen.Authentication.route) {
-
+        AuthenticationScreen(loadingState = false, onButtonClicked = {})
     }
 }
 
